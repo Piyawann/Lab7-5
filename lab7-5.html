@@ -1,0 +1,61 @@
+<html>
+
+<head>
+    <meta charset="utf‐8">
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        function tableformation() {
+            var tr = document.createElement("tr");
+
+            var textInput1 = document.getElementById("nameTextInput");
+            var Name = textInput1.value;
+            var td = document.createElement("td");
+            td.innerHTML = Name;
+            tr.appendChild(td);
+
+            var textInput2 = document.getElementById("addrTextInput");
+            var addr = textInput2.value;
+            var td = document.createElement("td");
+            td.innerHTML = addr;
+            tr.appendChild(td);
+
+            var textInput3 = document.getElementById("numTextInput");
+            var numm = textInput3.value;
+            var td = document.createElement("td");
+            td.innerHTML = numm;
+            tr.appendChild(td);
+
+            var table = document.getElementById("ttt");
+            table.appendChild(tr);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <p>ชื่อลูกค้า : <input type="text" id="nameTextInput"></p>
+        <p>ที่อยู่ : <input type="text" id="addrTextInput"></p>
+        <p>โทรศัพท์ : <input type="text" id="numTextInput"></p>
+        <input type="button" id="add" value="เพิ่ม" onclick="tableformation()">
+        <br>
+        <table id="ttt">
+            <tr>
+                <th>ชื่อลูกค้า</th>
+                <th>ที่อยู่</th>
+                <th>โทรศัพท์</th>
+            </tr>
+            <tr id="tr">
+            </tr>
+        </table>
+    </form>
+
+
+</body>
+
+</html>
